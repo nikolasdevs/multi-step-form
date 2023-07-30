@@ -190,6 +190,8 @@ button {
   cursor: pointer;
 }
 
+/***** STEP TWO STARTS *****/
+
 .step2 {
   display: flex;
   flex-direction: column;
@@ -233,7 +235,7 @@ button {
 .option-box-top,
 .option-box-bottom {
   height: auto;
-  width: fit-content;
+  width: 100%;
 }
 
 .option-box-bottom {
@@ -343,4 +345,104 @@ label {
 
 .yearly-switch {
   color: var(--marine-blue);
+}
+
+.step2 {
+  display: none;
+}
+
+/***** STEP TWO ENDS *****/
+
+/***** STEP THREE STARTS *****/
+
+.step3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-ons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.add-ons-box {
+  display: flex;
+  align-items: center;
+  gap: 10em;
+  padding: 2em;
+  border: 1px solid var(--purplish-blue);
+  border-radius: 1em;
+  background-color: var(--Magnolia);
+  height: auto;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.left-add-ons {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  width: fit-content;
+  height: auto;
+}
+
+.mark {
+  padding: 0.5em;
+  background-color: var(--purplish-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.add-ons-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.add-ons-txt-top,
+.add-ons-txt-bottom {
+  height: auto;
+  width: 100%;
+}
+
+.option-box-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.add-ons-txt-top h3 {
+  color: var(--marine-blue);
+}
+
+.add-ons-txt-bottom p {
+  color: var(--Cool-gray);
+}
+
+.right-add-ons {
+  height: auto;
+  width: fit-content;
+  height: auto;
+  color: var(--purplish-blue);
+}
+
+.unmark {
+  background-color: transparent;
+  border: 1px solid var(--Cool-gray);
+}
+
+.unmark .mark {
+  background-color: transparent;
+  border: 1px solid var(--Cool-gray);
+}
+
+.two {
+  background-color: transparent;
+}
+.three {
+  background-color: var(--Light-blue);
 }

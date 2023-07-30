@@ -446,3 +446,11 @@ label {
 .three {
   background-color: var(--Light-blue);
 }
+
+
+.right-add-ons p{
+  display: none;
+}
+.year p{
+  display: flex;
+}

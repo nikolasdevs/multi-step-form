@@ -99,13 +99,17 @@ aside {
   letter-spacing: 1.5px;
 }
 
-main {
+.main {
   padding: 2em 4em 2em 0;
   height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2em;
+}
+
+.step1 {
+  display: none;
 }
 
 .header {
@@ -172,6 +176,7 @@ input::placeholder {
   align-items: center;
   justify-content: end;
   margin-top: 5em;
+  background-color: aqua;
 }
 button {
   padding: 1em 2em;
@@ -182,4 +187,128 @@ button {
   border: none;
   letter-spacing: 1px;
   cursor: pointer;
+}
+
+.step2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  height: auto;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.option-box {
+  padding: 1.5em 2em 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3em;
+  width: 180px;
+  height: 200px;
+  border: 2px solid var(--purplish-blue);
+  border-radius: 1em;
+}
+
+.option-box:first-child {
+  background-color: hsl(229, 24%, 87%, 30%);
+}
+
+.option-box-top,
+.option-box-bottom {
+  height: auto;
+  width: fit-content;
+}
+
+.option-box-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.arcade-txt h3,
+.price p {
+  color: var(--marine-blue);
+}
+
+.switch-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  background-color: hsl(229, 24%, 87%, 30%);
+  padding: 1.2em 0;
+  margin-top: 1em;
+  border-radius: 1em;
+}
+
+.monthly-switch,
+.yearly-switch {
+  height: auto;
+  width: fit-content;
+  color: var(--marine-blue);
+}
+
+.yearly-switch {
+  color: var(--Cool-gray);
+}
+
+label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.switch input:checked,
+.slider {
+  background-color: var(--marine-blue);
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* .switch input:checked,
+.slider::before {
+  transform: translateX(26px);
+} */
+
+.step2-bottom {
+  display: flex;
+  justify-content: space-between;
+   margin-top: 1em;
+}
+.back p {
+  color: var(--Cool-gray);
 }

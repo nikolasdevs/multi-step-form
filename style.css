@@ -68,6 +68,7 @@ aside {
   justify-content: center;
   border-radius: 50%;
   padding: 1em;
+  cursor: pointer;
 }
 
 .one {
@@ -97,6 +98,7 @@ aside {
 .bottom p {
   color: var(--White);
   letter-spacing: 1.5px;
+  cursor: pointer;
 }
 
 .main {
@@ -176,7 +178,6 @@ input::placeholder {
   align-items: center;
   justify-content: end;
   margin-top: 5em;
-  background-color: aqua;
 }
 button {
   padding: 1em 2em;
@@ -192,6 +193,13 @@ button {
 .step2 {
   display: flex;
   flex-direction: column;
+}
+
+.one {
+  background-color: transparent;
+}
+.two {
+  background-color: var(--Light-blue);
 }
 
 .options {
@@ -212,12 +220,14 @@ button {
   gap: 3em;
   width: 180px;
   height: 200px;
-  border: 2px solid var(--purplish-blue);
+  border: 2px solid var(--Light-gray);
   border-radius: 1em;
+  cursor: pointer;
 }
 
 .option-box:first-child {
   background-color: hsl(229, 24%, 87%, 30%);
+  border: 2px solid var(--purplish-blue);
 }
 
 .option-box-top,
@@ -232,11 +242,13 @@ button {
   gap: 0.5em;
 }
 
-.arcade-txt h3,
-.price p {
+.arcade-txt h3 {
   color: var(--marine-blue);
 }
 
+.price p {
+  color: var(--Cool-gray);
+}
 .switch-box {
   display: flex;
   align-items: center;
@@ -267,11 +279,11 @@ label {
   cursor: pointer;
 }
 
-.switch input {
+.month-switch input {
   display: none;
 }
 
-.slider {
+.month-slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -282,12 +294,12 @@ label {
   cursor: pointer;
 }
 
-.switch input:checked,
-.slider {
+.month-switch input:checked,
+.month-slider {
   background-color: var(--marine-blue);
 }
 
-.slider::before {
+.month-slider::before {
   position: absolute;
   content: "";
   height: 24px;
@@ -299,16 +311,36 @@ label {
   transition: 0.4s;
 }
 
-/* .switch input:checked,
-.slider::before {
-  transform: translateX(26px);
-} */
-
 .step2-bottom {
   display: flex;
   justify-content: space-between;
-   margin-top: 1em;
+  margin-top: 1em;
 }
 .back p {
   color: var(--Cool-gray);
+  cursor: pointer;
+}
+
+.monthly {
+  display: none;
+}
+
+.free {
+  color: var(--marine-blue);
+}
+
+.year-switch input:checked,
+.year-slider::before {
+  transform: translateX(26px);
+}
+
+.monthly-switch,
+.yearly-switch {
+  height: auto;
+  width: fit-content;
+  color: var(--Cool-gray);
+}
+
+.yearly-switch {
+  color: var(--marine-blue);
 }

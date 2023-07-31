@@ -107,7 +107,7 @@ aside {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 3em;
 }
 
 .step1 {
@@ -195,6 +195,7 @@ button {
 .step2 {
   display: flex;
   flex-direction: column;
+  gap: 2em;
 }
 
 .one {
@@ -317,9 +318,11 @@ label {
   display: flex;
   justify-content: space-between;
   margin-top: 1em;
+  align-items: center;
 }
 .back p {
   color: var(--Cool-gray);
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -447,10 +450,125 @@ label {
   background-color: var(--Light-blue);
 }
 
-
-.right-add-ons p{
+.right-add-ons p {
   display: none;
 }
-.year p{
+.year p {
   display: flex;
+}
+
+/***** STEP THREE ENDS *****/
+
+/***** STEP FOUR STARTS *****/
+
+.step3 {
+  display: none;
+}
+
+.step4 {
+  display: flex;
+}
+
+.finishing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.finishing-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--Magnolia);
+  padding: 2em;
+  border-radius: 1em;
+  align-items: center;
+}
+
+.totals {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.top-total {
+  padding-bottom: 2em;
+}
+
+.totals:first-child {
+  border-bottom: 1px solid hsl(231, 11%, 63%, 30%);
+}
+
+.left-totals {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 0.5em;
+}
+
+.top-left-totals {
+  height: auto;
+  width: 100%;
+}
+.top-left-totals h3 {
+  color: var(--marine-blue);
+}
+
+.change-totals {
+  height: auto;
+  width: 100%;
+}
+
+.change-totals a,
+.change-totals p {
+  color: var(--Cool-gray);
+}
+
+.right-totals {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: end;
+}
+.right-totals p {
+  color: var(--marine-blue);
+}
+
+.tot-price p {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.overall {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2em;
+}
+
+.overall-price {
+  width: 100%;
+  height: auto;
+}
+
+.overall-price p {
+  color: var(--purplish-blue);
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.btn4 button {
+  background-color: var(--purplish-blue);
+}
+
+.three {
+  background-color: transparent;
+}
+.four {
+  background-color: var(--Light-blue);
 }

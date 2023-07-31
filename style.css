@@ -22,7 +22,7 @@ body {
 
 .container {
   background-color: var(--Magnolia);
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
 
@@ -32,10 +32,11 @@ body {
 .box {
   background-color: var(--White);
   height: auto;
-  max-width: 1440px;
   margin: 200px auto;
+  max-width: 1440px;
+  width: 100%;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 350px 1fr;
   padding: 1em;
   border-radius: 0.5em;
   gap: 4em;
@@ -75,10 +76,6 @@ aside {
   background-color: var(--Light-blue);
 }
 
-.num p {
-  font-size: 1em;
-}
-
 .info {
   display: flex;
   flex-direction: column;
@@ -101,6 +98,8 @@ aside {
   cursor: pointer;
 }
 
+/***** STEP ONE STARTS *****/
+
 .main {
   padding: 2em 4em 2em 0;
   height: auto;
@@ -111,7 +110,7 @@ aside {
 }
 
 .step1 {
-  display: none;
+  display: flex;
 }
 
 .header {
@@ -141,7 +140,7 @@ form {
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
 }
 
 .input-box {
@@ -154,6 +153,8 @@ form {
 
 label {
   color: var(--marine-blue);
+  width: 100%;
+  height: auto;
 }
 
 input {
@@ -189,6 +190,8 @@ button {
   letter-spacing: 1px;
   cursor: pointer;
 }
+
+/***** STEP ONE ENDS *****/
 
 /***** STEP TWO STARTS *****/
 
@@ -274,7 +277,7 @@ button {
   color: var(--Cool-gray);
 }
 
-label {
+.month-switch {
   position: relative;
   display: inline-block;
   width: 60px;
@@ -571,4 +574,171 @@ label {
 }
 .four {
   background-color: var(--Light-blue);
+}
+
+.right-totals {
+  display: none;
+}
+
+.right-totals.year {
+  display: flex;
+}
+
+/****** STEP FOUR ENDS ******/
+
+/****** STEP FIVE STARTS ******/
+
+.step4 {
+  display: none;
+}
+
+.step5 {
+  display: none;
+}
+
+.thanks {
+  text-align: center;
+  gap: 2em;
+  padding: 10em;
+}
+
+.thanks p {
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-color: var(--Magnolia);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+    position: relative;
+  }
+
+  .four {
+    background-color: transparent;
+  }
+
+  .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 375px;
+    grid-template-columns: 1fr;
+    padding: 0;
+    border-radius: 0.5em;
+    margin: 0;
+  }
+
+  aside {
+    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    flex-direction: row;
+    border-radius: 0;
+    justify-content: center;
+    height: 200px;
+    align-items: start;
+    width: 100%;
+  }
+
+  .one {
+    background-color: var(--Light-blue);
+  }
+
+  .info {
+    display: none;
+  }
+
+  .step1 {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+
+    transform: translate(-50%, 50%);
+    background-color: var(--White);
+    padding: 2em;
+    height: auto;
+    width: 375px;
+    gap: 2em;
+    border-radius: 1em;
+    bottom: -60%;
+    box-shadow: 0px 10px 64px 0px hsl(231, 11%, 63%, 0.5);
+  }
+
+  .header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .t-header,
+  .b-header {
+    width: 100%;
+    height: auto;
+  }
+
+  .t-header h1 {
+    font-size: 2em;
+    color: var(--marine-blue);
+  }
+  .b-header p {
+    color: var(--Cool-gray);
+  }
+
+  form {
+    gap: 1em;
+  }
+
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 0.2em;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  input {
+    padding: 0.5em;
+    border: 1px solid var(--Cool-gray);
+    border-radius: 0.5em;
+    outline: none;
+  }
+
+  input:active,
+  input:focus {
+    border: 1.2px solid var(--purplish-blue);
+  }
+
+  input::placeholder {
+    color: var(--Cool-gray);
+    font-weight: 500;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  button {
+    padding: 1em 2em;
+    align-items: end;
+    background-color: var(--marine-blue);
+    border-radius: 0.5em;
+    color: var(--Light-gray);
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
 }

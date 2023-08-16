@@ -5,8 +5,10 @@
 }
 
 body {
+  position: relative;
   font-size: 16px;
   font-family: "ubuntu", sans-serif;
+  background-color: var(--Magnolia);
   --marine-blue: hsl(213, 96%, 18%);
   --purplish-blue: hsl(243, 100%, 62%);
   --Pastel-blue: hsl(228, 100%, 84%);
@@ -20,23 +22,24 @@ body {
   --White: hsl(0, 0%, 100%);
 }
 
-.container {
+/* .container {
   background-color: var(--Magnolia);
-  height: 100%;
-  width: 100%;
+  height: 100vh;
   display: flex;
-
-  flex-direction: column;
-}
-
-.box {
-  background-color: var(--White);
-  height: auto;
-  margin: 200px auto;
   max-width: 1440px;
   width: 100%;
+  flex-direction: column;
+  margin: 100px auto;
+} */
+
+.box {
+  position: relative;
+  background-color: var(--White);
+  margin: 200px auto;
+  height: auto;
+  max-width: 1440px;
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 300px 1fr;
   padding: 1em;
   border-radius: 0.5em;
   gap: 4em;
@@ -101,7 +104,7 @@ aside {
 /***** STEP ONE STARTS *****/
 
 .main {
-  padding: 2em 4em 2em 0;
+  padding: 2em;
   height: auto;
   width: 100%;
   display: flex;
@@ -191,6 +194,10 @@ button {
   cursor: pointer;
 }
 
+.step1 {
+  display: none;
+}
+
 /***** STEP ONE ENDS *****/
 
 /***** STEP TWO STARTS *****/
@@ -222,13 +229,17 @@ button {
   padding: 1.5em 2em 1.5em 1em;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 3em;
-  width: 180px;
+  width: 100%;
   height: 200px;
   border: 2px solid var(--Light-gray);
   border-radius: 1em;
   cursor: pointer;
+}
+
+.okay {
+  display: flex;
+  flex-direction: column;
 }
 
 .option-box:first-child {
@@ -246,6 +257,13 @@ button {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+}
+
+.option-box-bottom::after {
+  content: "2 months free";
+  color: var(--marine-blue);
+  display: flex;
+  width: 100%;
 }
 
 .arcade-txt h3 {
@@ -318,9 +336,10 @@ button {
 }
 
 .step2-bottom {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 1em;
+  margin-top: 3em;
   align-items: center;
 }
 .back p {
@@ -353,9 +372,9 @@ button {
   color: var(--marine-blue);
 }
 
-.step2 {
+/* .step2 {
   display: none;
-}
+} */
 
 /***** STEP TWO ENDS *****/
 
@@ -605,27 +624,38 @@ button {
 .thanks p {
   line-height: 1.5;
 }
+/****** STEP FIVE ENDS ******/
+
+@media (max-width: 954px) {
+  .box {
+    grid-template-columns: 200px 1fr;
+    gap: 2em;
+  }
+
+  .main {
+    padding: 2em;
+  }
+  .bottom {
+    display: none;
+  }
+
+  .option-box {
+    gap: 2em;
+  }
+}
 
 @media (max-width: 768px) {
-  .container {
-    background-color: var(--Magnolia);
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5em;
+  /* body {
     position: relative;
-  }
+  } */
 
   .four {
     background-color: transparent;
   }
 
   .box {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+
     min-width: 375px;
     grid-template-columns: 1fr;
     padding: 0;
@@ -651,44 +681,19 @@ button {
     display: none;
   }
 
-  .step1 {
+  .mobile {
     position: absolute;
-    top: -40%;
+    top: -30%;
     left: 50%;
-    /* margin-left: 40px;
-    margin-right: 40px; */
-
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 30%);
     background-color: var(--White);
-    padding: 2em;
+    padding: 1.5em;
     height: auto;
     width: 375px;
-    gap: 2em;
+    gap: 1em;
     border-radius: 1em;
     bottom: -60%;
     box-shadow: 0px 10px 64px 0px hsl(231, 11%, 63%, 0.5);
-  }
-
-  .header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .t-header,
-  .b-header {
-    width: 100%;
-    height: auto;
-  }
-
-  .t-header h1 {
-    font-size: 2em;
-    color: var(--marine-blue);
-  }
-  .b-header p {
-    color: var(--Cool-gray);
   }
 
   form {
@@ -696,49 +701,116 @@ button {
   }
 
   .input-box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
     gap: 0.2em;
   }
 
-  label {
-    width: 100%;
+  .step1 {
+    display: none;
   }
 
-  input {
-    padding: 0.5em;
-    border: 1px solid var(--Cool-gray);
-    border-radius: 0.5em;
-    outline: none;
+  /***** STEP 2 MOBILE STARTS *****/
+
+  .step2 {
+    bottom: -170%;
   }
 
-  input:active,
-  input:focus {
-    border: 1.2px solid var(--purplish-blue);
+  .one {
+    background-color: transparent;
+  }
+  .two {
+    background-color: var(--Light-blue);
   }
 
-  input::placeholder {
-    color: var(--Cool-gray);
-    font-weight: 500;
-  }
-
-  .btn {
+  .options {
     display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-top: 5em;
-    margin-bottom: 5em;
+    flex-direction: column;
   }
-  button {
-    padding: 1em 2em;
+
+  .option-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    gap: 1px;
+    width: 100%;
+    height: auto;
+  }
+
+  .option-box-top {
+    display: flex;
+  }
+
+  .option-box-bottom {
+
+    display: flex;
     align-items: end;
-    background-color: var(--marine-blue);
-    border-radius: 0.5em;
-    color: var(--Light-gray);
-    border: none;
-    letter-spacing: 1px;
+    justify-content: center;
+  }
+  .option-box-bottom::after {
+    display: none;
+  }
+
+  .monthly-switch,
+  .yearly-switch {
+    height: auto;
+    width: fit-content;
+    color: var(--marine-blue);
+  }
+
+  .yearly-switch {
+    color: var(--Cool-gray);
+  }
+
+  .month-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
     cursor: pointer;
   }
+
+  .month-switch input:checked,
+  .month-slider {
+    background-color: var(--marine-blue);
+  }
+
+  .year-switch input:checked,
+  .year-slider::before {
+    transform: translateX(0);
+  }
+
+  .step2-bottom {
+    background-color: var(--White);
+    padding: 1em;
+    height: auto;
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    right: 0;
+  }
+
+  .monthly {
+    display: flex;
+  }
+  .yearly {
+    display: none;
+  }
+
+  /* .monthly-switch,
+  .yearly-switch {
+    height: auto;
+    width: fit-content;
+    color: var(--Cool-gray);
+  } */
+
+  /* .yearly-switch {
+    color: var(--marine-blue);
+  } */
+
+  /* .step2 {
+  display: none;
+} */
 }
